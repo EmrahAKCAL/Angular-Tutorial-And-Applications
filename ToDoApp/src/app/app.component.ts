@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Model } from './model'; //model.ts dosyasındaki Model sınıfı çağrıldı/import edildi.
+import { Model, TodoItem } from './model'; //model.ts dosyasındaki Modeli TodoItem sınıfları çağrıldı/import edildi.
 
 @Component({
   selector: 'app-root', //Appcomponenti nerede kullanılacağı bir etiketi temsil eder
@@ -14,5 +14,10 @@ export class AppComponent {
  }
  getItems(){
    return this.model.items.filter(item=>!item.action); //liste elemanların üzerinden filtreleme yapıldı, action değeri false olanları tek geri döndürür.
+ }
+ addItem(value){
+   if(value!==''){ //addItem içerisine gelen değer boş değilse
+     this.model.items.push(new TodoItem(value, false)); //TodoItem classına gönder.
+   }
  }
 }

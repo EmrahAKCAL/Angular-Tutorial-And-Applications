@@ -4,9 +4,9 @@
       <h3>
         [{{getName()}}] To Do List</h3> <!--getName() fonksionun içeriğini yazdır.-->
       <div class="input-group">
-        <input type="text" class="form-control">
+        <input type="text" class="form-control" #todoText> <!--todoText ile value kontrolü-->
         <div class="input-group-append">
-          <button class="bnt-primary">Add</button>
+          <button class="bnt-primary" (click)="addItem(todoText.value); todoText.value='';">Add</button> <!--butona click eventi verildi ve todoText'e gelen değer addItem(app.component.ts içerisinde) fonksiyona atıldı.-->
         </div>
       </div>
       <table class="table">
