@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ToDoApp'; //veri tabanında bilgi almak için gerekli olan kodlar olabilir, ürün listesi olabilir.
+  user= 'Emrah';
+  items = [
+    {description: "Spor", action: "No"},
+    {description: "Kahvaltı", action: "No"},
+    {description: "Ders Çalışma", action: "No"},
+    {description: "Sinema", action: "No"},
+    {description: "Fatura Ödeme", action: "No"}
+  ]
 }
