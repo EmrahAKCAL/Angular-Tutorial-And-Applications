@@ -1,0 +1,5 @@
+/*bu dosyanın içerisindeki css kodları sadece app.component.html sayfasına uygulanır.*/
+h1{
+    color: blue;
+    text-align: center;
+}
