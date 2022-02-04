@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Model } from './model'; //model.ts dosyasındaki Model sınıfı çağrıldı/import edildi.
 
 @Component({
   selector: 'app-root', //Appcomponenti nerede kullanılacağı bir etiketi temsil eder
@@ -7,12 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ToDoApp'; //veri tabanında bilgi almak için gerekli olan kodlar olabilir, ürün listesi olabilir.
-  user= 'Emrah';
-  items = [
-    {description: "Spor", action: "No"},
-    {description: "Kahvaltı", action: "No"},
-    {description: "Ders Çalışma", action: "No"},
-    {description: "Sinema", action: "No"},
-    {description: "Fatura Ödeme", action: "No"}
-  ]
+ model= new Model(); //model.ts dosyasındaki Model() sınıfı/fonksiyonu 
+ getName(){
+   return this.model.user; //Model sınıfın içerisindeki user bilgisini döndürme
+ }
+ getItems(){
+   return this.model.items;
+ }
 }

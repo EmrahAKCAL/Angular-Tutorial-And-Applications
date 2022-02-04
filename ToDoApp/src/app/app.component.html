@@ -1,7 +1,8 @@
 <div class="container">
   <div class="row">
     <div class="header">
-      <h3>[{{user}}] To Do List</h3>
+      <h3>
+        [{{getName()}}] To Do List</h3> <!--getName() fonksionun içeriğini yazdır.-->
       <div class="input-group">
         <input type="text" class="form-control">
         <div class="input-group-append">
@@ -11,14 +12,19 @@
       <table class="table">
         <thead class="list-header">
           <tr>
+            <th>No</th>
             <th>Description</th>
             <th>Action</th>
           </tr>
         </thead>
         <tbody class="list-body">
-          <tr *ngFor="let item of items">
-            <td>{{item.description}}</td>
-            <td>{{item.action}}</td>
+          <tr *ngFor="let item of getItems(); let i=index"> <!--For kullanımı, index 0'dan başlar-->
+            <td>{{i+1}}</td> <!--index numaralrını 1 artır-->
+            <td>{{item.description}}</td> <!--getItems() fonksiyonun içerisinde bulunan her itemin description kısmını yazdır.-->
+            <td [ngSwitch]="item.action"> <!--Switc kullanımı-->
+              <span *ngSwitchCase="true">Yes</span>  <!--action içerisinde true olanları Yes şeklinde dönüştür.-->
+              <span *ngSwitchCase="false">No</span>
+          </td>
           </tr>
         </tbody>
       </table>
