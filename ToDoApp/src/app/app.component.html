@@ -9,6 +9,10 @@
           <button class="bnt-primary" (click)="addItem(todoText.value); todoText.value='';">Add</button> <!--butona click eventi verildi ve todoText'e gelen değer addItem(app.component.ts içerisinde) fonksiyona atıldı.-->
         </div>
       </div>
+      <div class="checkbox-right">
+        <input type="checkbox" id="displayAll" [(ngModel)]="isDisplayAll">
+        <label for="displayAll">Hepsini Göster</label>
+      </div>
       <table class="table">
         <thead class="list-header">
           <tr>

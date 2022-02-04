@@ -9,10 +9,14 @@ import { Model, TodoItem } from './model'; //model.ts dosyasındaki Modeli TodoI
 export class AppComponent {
   title = 'ToDoApp'; //veri tabanında bilgi almak için gerekli olan kodlar olabilir, ürün listesi olabilir.
  model= new Model(); //model.ts dosyasındaki Model() sınıfı/fonksiyonu 
+ isDisplayAll=false; //ilk başta işaretli değil
  getName(){
    return this.model.user; //Model sınıfın içerisindeki user bilgisini döndürme
  }
  getItems(){
+   if(this.isDisplayAll){
+     return this.model.items; //eğer isDisplayAll seçili ise listenin tüm elemanlarını gönder
+   }
    return this.model.items.filter(item=>!item.action); //liste elemanların üzerinden filtreleme yapıldı, action değeri false olanları tek geri döndürür.
  }
  addItem(value){
