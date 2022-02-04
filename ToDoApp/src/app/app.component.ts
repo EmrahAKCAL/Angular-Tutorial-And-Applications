@@ -13,6 +13,6 @@ export class AppComponent {
    return this.model.user; //Model sınıfın içerisindeki user bilgisini döndürme
  }
  getItems(){
-   return this.model.items;
+   return this.model.items.filter(item=>!item.action); //liste elemanların üzerinden filtreleme yapıldı, action değeri false olanları tek geri döndürür.
  }
 }

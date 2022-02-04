@@ -14,6 +14,7 @@
           <tr>
             <th>No</th>
             <th>Description</th>
+            <th></th>
             <th>Action</th>
           </tr>
         </thead>
@@ -21,6 +22,7 @@
           <tr *ngFor="let item of getItems(); let i=index"> <!--For kullanımı, index 0'dan başlar-->
             <td>{{i+1}}</td> <!--index numaralrını 1 artır-->
             <td>{{item.description}}</td> <!--getItems() fonksiyonun içerisinde bulunan her itemin description kısmını yazdır.-->
+            <td><input type="checkbox" [(ngModel)]="item.action"></td><!--checkbox değeri item.action a karşılık gelecektir.-->
             <td [ngSwitch]="item.action"> <!--Switc kullanımı-->
               <span *ngSwitchCase="true">Yes</span>  <!--action içerisinde true olanları Yes şeklinde dönüştür.-->
               <span *ngSwitchCase="false">No</span>

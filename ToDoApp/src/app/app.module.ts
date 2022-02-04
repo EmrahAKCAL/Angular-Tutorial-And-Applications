@@ -2,13 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms'; //html sayfasında form kullanmak için formsModule import edilmelidir.
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule //tarayıcı ile çalışabileceğimizi belirtir.
+    BrowserModule, //tarayıcı ile çalışabileceğimizi belirtir.
+    FormsModule //export edilecek 
   ],
   providers: [],
   bootstrap: [AppComponent //çalıştırılabilir ilk component
