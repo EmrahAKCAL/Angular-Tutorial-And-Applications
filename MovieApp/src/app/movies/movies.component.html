@@ -1,7 +1,10 @@
-<h2>{{getTitle()}}</h2>
-<p>{{'Id: '+movie.id}}</p>
-<p>{{movie.name}}</p>
-<movie></movie> <!--movie.component.html çalıştır-->
-<movie></movie>
-
-<!--{{}} çift küme parantezlerine string interpolation denilir.-->
+<div class="container">
+    <div class="header">
+        {{title}}
+    </div>
+    <ul class="list-group">
+        <li *ngFor="let movie of movies" class="list-item">
+            <span class="badge-primary">{{movie.id}}</span> {{movie.name}} <span class="close">X</span>
+        </li>
+    </ul>
+</div>
