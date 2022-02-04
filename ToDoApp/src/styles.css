@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+
+.container{
+    width: 500px;
+    margin: 0 auto;
+}
+h3{
+    color: #fff;
+    background-color: #01574b;
+    padding: 20px;
+    margin-top: 0;
+    text-align: center;
+}
+
+.input-group{
+    margin:5px;
+    display: flex;
+}
+.form-control{
+    width: 400px;
+    font-size: 18px;
+    padding: 5px;
+    border: 1px solid grey;
+}
+.bnt-primary{
+    background-color: #0000ff;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    height: 40px;
+    border-radius: 0px 10px 10px 0px;
+}
+.table{
+    width: 100%;
+    
+}
+.list-header{
+    background-color: #588f3d;
+    font-size: 22px;
+    color: #daa702;
+}
+.list-body{
+    background-color: #84d65b;
+    font-size: 18px;
+}
