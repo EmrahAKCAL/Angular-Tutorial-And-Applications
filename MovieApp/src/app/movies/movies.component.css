@@ -1,0 +1,61 @@
+.card{
+    padding: 20px;
+    background-color: #1193a2;
+}
+.input-group{
+    display: flex;
+}
+.form-control{
+    padding: 5px;
+    width: 300px;
+    border-radius: 8px;
+}
+.btn-update{
+    padding: 6px;
+    background-color: #7e1d1d;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    margin-left: 5px;
+}
+.container{
+    background-color: #f5f5f5;;
+}
+.header{
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: 1px solid #c4c3c3;
+    background-image: linear-gradient(#e6e1df, #f09f09, #ffa500, #ffa500);
+    border-radius: 0px 0px 10px 10px;
+    color: #fff;
+}
+.list-group{
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    font-size: 18px;
+}
+.list-item{
+    border-bottom: 1px solid firebrick;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.badge-primary{
+    background-color: blue;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    margin-right: 10px;
+}
+.close{
+    float: right;
+    color: #fff;
+    background-color: #ff0000;
+    text-align: center;
+    width: 20px;
+}
+.active{
+    background-color: #5050df;
+}
