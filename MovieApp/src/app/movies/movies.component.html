@@ -1,9 +1,23 @@
+<div class="card" *ngIf="selectedMovie"> <!--ngIf ile selectedMovie seçili ise görünür olur-->
+    <div >
+        <span class="card-body">
+            Id: {{ selectedMovie.id}} Name:  {{selectedMovie.name}}
+        </span>
+        <div class="input-group">
+            <input type="text" class="form-control" [(ngModel)]="selectedMovie.name"> <!--ngModule ile çift taraflı işlem yapılır-->
+            <div>
+                <button type="button" class="btn-update">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="header">
         {{title}}
     </div>
     <ul class="list-group">
-        <li *ngFor="let movie of movies" class="list-item">
+        <li *ngFor="let movie of movies" (click)="onSelect(movie)"  class="list-item" 
+        [class.active]="movie===selectedMovie"> <!--seçilen eleman selectedMovie ye eşit ise active class ını aktif edilir.(bg-blue)-->
             <span class="badge-primary">{{movie.id}}</span> {{movie.name}} <span class="close">X</span>
         </li>
     </ul>
