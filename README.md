@@ -28,3 +28,58 @@ Kurulum işlemi bittikten sonra bir dosya oluşturup <b><i>windows işletim sist
   <li><b><i>code .</i></b> ile bizim kullanacağımız editör gelir(Visual Stadio) </li>
   <li><b><i>ng serve</i></b> proje çalıştırılır.</li>
 </ul>
+<h1>AngularJS Giriş</h1>
+AngularJS, HTML'yi ng yönergeleriyle genişletir .<br>
+<ul>
+  <li><b><i>ng-app </i></b>bir AngularJS uygulamasını tanımlar . </li>
+  <li><b><i>ng-model  </i></b> HTML kontrollerinin (input, select, textarea) değerini uygulama verilerine bağlar. [(ngModel)]='...' şeklinde kullanılır ve app.module.ts içerisinde export edilir.</li>
+  <li><b><i>ng-bind </i></b>uygulama verilerini HTML görünümüne bağlar . </li>
+  <li><b><i>ng-init </i></b>AngularJS uygulama değişkenlerini başlatır.  </li>
+  <li><b><i>{{ ifade }}</i></b> AngularJS ifadeleri çift parantez içinde yazılır .</li>
+</ul>
+
+<a href="https://www.w3schools.com/angular/default.asp">w3schools</a> <br>
+
+<h2>[(ngModel)] Şablona dayalı formlar</h2>
+<br><a href="https://angular.io/guide/forms-overview">Formlar</a><br><br>
+Kullanıcı girdisini formlarla işlemek, birçok yaygın uygulamanın temel taşıdır. 
+Uygulamalar, kullanıcıların oturum açmasını, bir profili güncellemesini, hassas bilgileri girmesini ve diğer birçok veri girişi görevini gerçekleştirmesini sağlamak için formları kullanır.<br>
+<b><i>Reaktif formlar</i></b> , temel alınan formlar nesne modeline doğrudan, açık erişim sağlar. Şablon temelli formlarla karşılaştırıldığında, daha sağlamdırlar: daha ölçeklenebilir, yeniden kullanılabilir ve test edilebilirler.<br>
+<b><i>Şablona dayalı formlar</i></b> , temel alınan nesne modelini oluşturmak ve işlemek için şablondaki yönergelere dayanır. E-posta listesi kayıt formu gibi bir uygulamaya basit bir form eklemek için kullanışlıdırlar. Bir uygulamaya eklemek kolaydır, ancak reaktif formlar kadar iyi ölçeklenmezler.<br><br>
+<table>
+  <thead>
+    <tr>
+      <th>Farkları </th>
+      <th>REAKTİF [formControl]</th>
+      <th>ŞABLON ODAKLI  [(NgModel)] </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Form modelinin kurulumu </td>
+      <td>Açık, bileşen sınıfında oluşturuldu </td>
+      <td>Direktifler tarafından oluşturulan örtük </td>
+    </tr>
+    <tr>
+      <td>Veri örneği </td>
+      <td>Yapılandırılmış ve değişmez </td>
+      <td>Yapılandırılmamış ve değişken </td>
+    </tr>
+    <tr>
+      <td>Veri akışı </td>
+      <td>Senkron </td>
+      <td>	asenkron </td>
+    </tr>
+    <tr>
+      <td>Form doğrulama </td>
+      <td>	Fonksiyonlar </td>
+      <td> direktifler</td>
+    </tr>
+  </tbody>
+</table>
+  
+
+
+
+Şablona dayalı formlar , şablonda değişiklikler yapıldıkça bileşendeki veri modelini güncellemek için <b><i>iki yönlü veri bağlamayı kullanır</i></b> ve bunun tersi de geçerlidir.
+
