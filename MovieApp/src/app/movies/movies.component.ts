@@ -1,7 +1,6 @@
 import { Component } from "@angular/core";
 import { Movie } from "../movie";
-import { Movies } from "../movie.datasource";
-
+import { MovieService } from "../movie.service";
 @Component({
     selector: 'movies', //<movies> </movies> şeklinde çağrılır. class veya id şeklinde de tanımlanılabilir. css mantığı
     templateUrl: './movies.component.html', //içerik olarak çıkacak olan 
@@ -10,10 +9,17 @@ import { Movies } from "../movie.datasource";
 })
 export class MoviesComponent {
     title= 'Movie List';
-    movies=Movies;
+    movies: Movie[]; //tipi Movie listesi olarak belirtildi.
     selectedMovie: Movie;
+    constructor(private movieService: MovieService){} //movieService de bir örnek oluşturuldu. constructor MoviesComponent'e bir obje türetildiği anda çalıştırılan bir yapıdır.(inchet)
+    ngOnInit():void{ //sayfa çalıştığı anda getMovies çalışsın. constructor dan sonra çalışır.
+        this.getMovies();
+    }
     onSelect(movie: Movie): void{
         this.selectedMovie= movie;
+    }
+    getMovies():void{
+        this.movies=this.movieService.getMovies(); //componentin içerisindeki movies i movieService üzerinden gelen getMovies()  e doldurmak
     }
 }
 
