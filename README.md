@@ -31,13 +31,18 @@ Kurulum işlemi bittikten sonra bir dosya oluşturup <b><i>windows işletim sist
 <h1>AngularJS Giriş</h1>
 AngularJS, HTML'yi ng yönergeleriyle genişletir .<br>
 <ul>
+  <li><b><i>ng build</i></b>Bir Angular uygulamasını bir çıktı dizininde derler.</li>
+  <li><b><i>ng serve </i></b>Dosya değişikliklerini yeniden oluşturarak uygulamanızı oluşturur ve sunar.</li>
+  <li><b><i>ng generate </i></b>Bir şemaya dayalı olarak dosyalar oluşturur veya değiştirir.</li>
+  <li><b><i>ng test</i></b>Belirli bir proje üzerinde birim testleri çalıştırır. </li>
+  <li><b><i>ng e2e</i></b>Bir Angular uygulaması oluşturur ve sunar, ardından uçtan uca testler çalıştırır.</li>
   <li><b><i>ng-app </i></b>bir AngularJS uygulamasını tanımlar . </li>
   <li><b><i>ng-model  </i></b> HTML kontrollerinin (input, select, textarea) değerini uygulama verilerine bağlar. [(ngModel)]='...' şeklinde kullanılır ve app.module.ts içerisinde export edilir.</li>
   <li><b><i>ng-bind </i></b>uygulama verilerini HTML görünümüne bağlar . </li>
   <li><b><i>ng-init </i></b>AngularJS uygulama değişkenlerini başlatır.  </li>
   <li><b><i>{{ ifade }}</i></b> AngularJS ifadeleri çift parantez içinde yazılır .</li>
 </ul>
-
+<a href="https://angular.io/guide/what-is-angular">AngularJS Sayfası</a> <br>
 <a href="https://www.w3schools.com/angular/default.asp">w3schools</a> <br>
 
 <h2>[(ngModel)] Şablona dayalı formlar</h2>
