@@ -1,0 +1,28 @@
+.card{
+    background-color: #098488;
+    display: flex;
+}
+.card-header{
+    display: flex;
+}
+
+.card-body{
+    margin-left: 10px;
+    background-color: #ffffff;
+    width: 300px;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.card-title{
+    text-decoration: none;
+}
+.card-text{
+    color: #053537;
+}
+.more-btn{
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #1b696b;
+}
