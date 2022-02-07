@@ -1,0 +1,13 @@
+<div class="container" *ngIf="loggingService.messages.length">
+    <div class="card-header">
+        Messages
+        <button (click)="loggingService.clear()" class="btn-clear">Clear</button>
+    </div>
+    <hr>
+    <div class="card-body">
+        
+        <p *ngFor="let message of loggingService.messages">
+            {{message}}
+        </p>
+    </div>
+</div>
