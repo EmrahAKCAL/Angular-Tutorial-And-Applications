@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Movie } from './movie';
 import { Movies } from './movie.datasource';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root' //uygulamanın herhangi bir yerinde bu service ulaşılabilir.
@@ -8,7 +9,7 @@ import { Movies } from './movie.datasource';
 export class MovieService {
   constructor() { }
 
-  getMovies(): Movie[]{ //geri dönüşü Movie listedi olan bir metot 
-    return Movies; //datasource içerisindeki bilgileri geri gönderir.
+  getMovies(): Observable<Movie[]>{ //geri dönüşü Movie listedi olan bir metot 
+    return of(Movies); //Movies dizileri observable ile çevrilip datasource içerisindeki bilgileri geri gönderir.
   }
 }
