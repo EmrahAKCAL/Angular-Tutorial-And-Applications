@@ -19,7 +19,10 @@ export class MoviesComponent {
         this.selectedMovie= movie;
     }
     getMovies():void{
-        this.movies=this.movieService.getMovies(); //componentin içerisindeki movies i movieService üzerinden gelen getMovies()  e doldurmak
+          this.movieService.getMovies().subscribe(movies=>{ // subscribe ile asenkron metotu ile çalışması sağlanıldı
+            this.movies= movies;
+          }); //componentin içerisindeki movies i movieService üzerinden gelen getMovies()  e doldurmak
+        
     }
 }
 
