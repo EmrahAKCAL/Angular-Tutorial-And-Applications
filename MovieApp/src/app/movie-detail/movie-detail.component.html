@@ -1,0 +1,13 @@
+<div class="card" *ngIf="movie"> <!--ngIf ile movie seçili ise görünür olur-->
+    <div >
+        <span class="card-body">
+            Id: {{ movie.id}} Name:  {{movie.name}}
+        </span>
+        <div class="input-group">
+            <input type="text" class="form-control" [(ngModel)]="movie.name"> <!--ngModule ile çift taraflı işlem yapılır-->
+            <div>
+                <button type="button" class="btn-update">Update</button>
+            </div>
+        </div>
+    </div>
+</div>

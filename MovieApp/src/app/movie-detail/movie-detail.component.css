@@ -1,0 +1,20 @@
+.card{
+    padding: 20px;
+    background-color: #1193a2;
+}
+.input-group{
+    display: flex;
+}
+.form-control{
+    padding: 5px;
+    width: 300px;
+    border-radius: 8px;
+}
+.btn-update{
+    padding: 6px;
+    background-color: #7e1d1d;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    margin-left: 5px;
+}
