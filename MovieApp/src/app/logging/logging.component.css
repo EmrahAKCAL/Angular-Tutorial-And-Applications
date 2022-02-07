@@ -1,0 +1,13 @@
+.container{
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+}
+.btn-clear{
+    float: right;
+    border: none;
+    background-color: #dccdcd;
+    padding: 5px;
+    color: #ff0000;
+}
