@@ -7,6 +7,7 @@ import { MovieComponent } from './movie/movie.component';
 import { FormsModule } from '@angular/forms';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { LoggingComponent } from './logging/logging.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LoggingComponent } from './logging/logging.component';
   ],
   imports: [ //module export edilmesi
     BrowserModule,
-    FormsModule //ngModule(çift taraflı etkileşim) kullanmak için
+    FormsModule,
+    AppRoutingModule //ngModule(çift taraflı etkileşim) kullanmak için
   ],
   providers: [],
   bootstrap: [AppComponent] //ilk çalışacak component yapısı
