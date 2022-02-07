@@ -17,5 +17,6 @@ Varsayılan olarak, bu komut aşağıdakileri oluşturur:<br>
     <b><i>templateUrl: './new-component.component.html', </b> Component bilgileri görüntülendiği HTML sayfasıdır. <br>
     <b><i>styleUrls: ['./new-component.component.css'] </b> Bu componentin stil özellikleri verildiği CSS dosyasıdır.<br>
     })</li>
-  <li><b><i>export class NewComponentComponent implements OnInit  </b> Component kodunu içeren sınıf </li>
+  <li><b><i>export class NewComponentComponent implements OnInit  </b> Component kodunu içeren sınıf </i></li>
 </ul>
+<b><i>NOT:</b> Tüm oluşturulan yeni componentler app.component.ts dosyasında import ve export edilir. </i>
