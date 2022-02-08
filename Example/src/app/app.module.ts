@@ -4,13 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [
+  declarations: [ //oluşturmuş olduğumuz component
     AppComponent
   ],
-  imports: [
+  imports: [ //angulardan gelen modüller
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] //modülün çalıştıracağı ilk component
 })
 export class AppModule { }

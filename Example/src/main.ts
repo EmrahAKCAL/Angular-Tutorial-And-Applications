@@ -8,5 +8,5 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
+platformBrowserDynamic().bootstrapModule(AppModule) //tarayıcıda çalışacağı ve çalıştıracağı ilk modül
   .catch(err => console.error(err));
