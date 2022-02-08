@@ -14,4 +14,9 @@ export class MovieService {
     this.loggingService.add('MovieService: listing movies');
     return of(Movies); //Movies dizileri observable ile çevrilip datasource içerisindeki bilgileri geri gönderir.
   }
+
+  getMovie(id): Observable<Movie>{//tek bir movie gelir
+    this.loggingService.add('MovieService: get detail by id: '+id);
+    return of(Movies.find(movie=> movie.id===id));
+  }
 }
