@@ -1,3 +1,9 @@
 <div>
     there are {{ model.getProducts().length }} products in the repository.
 </div>
+<div>
+    <h2>{{product.name}}</h2> <!--interpolation-->
+    <h2 [textContent]="product.name"></h2> <!--property binding-->
+    <img src="assets/img/{{product.imageUrl}}">
+    <img [src]="'assets/img/'+product.imageUrl ">
+</div>
