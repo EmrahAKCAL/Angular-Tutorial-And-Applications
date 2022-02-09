@@ -1,0 +1,15 @@
+.container{
+    background-color: #098488;
+    padding: 10px;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 5px;
+}
+a{
+    color: #e4e4e4;
+    text-decoration: none;
+}
+.nav-link{
+    display: flex;
+    float: right;
+    margin-right: 20px;
+}
