@@ -1,9 +1,21 @@
 <div>
     there are {{ model.getProducts().length }} products in the repository.
 </div>
-<div>
-    <h2>{{product.name}}</h2> <!--interpolation-->
-    <h2 [textContent]="product.name"></h2> <!--property binding-->
-    <img src="assets/img/{{product.imageUrl}}">
-    <img [src]="'assets/img/'+product.imageUrl ">
+<div class="text-color" [class]="getClasses(1)">
+    katalogtaki ilk ürün {{model.getProductById(1).name}}
+</div>
+<div [class]="getClasses(2)">
+    katalogtaki ilk ürün {{model.getProductById(2).name}}
+</div>
+<div [class]="getClasses(3)">
+    katalogtaki ilk ürün {{model.getProductById(3).name}}
+</div>
+<div class="card-border mgn-5" [ngClass]="getClassMap(1)">
+    katalogtaki ilk ürün {{model.getProductById(1).name}}
+</div>
+<div class="card-border mgn-5" [ngClass]="getClassMap(4)">
+    katalogtaki ilk ürün {{model.getProductById(4).name}}
+</div>
+<div class="card-border mgn-5" [ngClass]="getClassMap(5)">
+    katalogtaki ilk ürün {{model.getProductById(5).name}}
 </div>
