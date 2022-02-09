@@ -15,7 +15,7 @@ export class ProductRepository{
     getProducts(): Product[]{
         return this.products;
     }
-    getProductsById(id: number): Product{
+    getProductById(id: number): Product{
         return this.products.find(p=> p.id==id); //dışardan gelen bir id değeri liste içerisindeki her bir elemanın id değerini kontrol edecek ve eşleşme söz konusu ise Product geri döndürecek
     }
 }
