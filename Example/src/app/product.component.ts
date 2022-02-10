@@ -35,4 +35,14 @@ export class ProductComponent{
             backgroundColor: product.price>3000? 'aqua': 'pink'
         }
     }
+    //Event Binding
+    onSubmit($event){
+        $event.stopPropagation(); //click olayı sadece butonda olsun dışarı aktarı olmasın.
+        console.log('Button was clicked');
+        console.log($event);
+    }
+    onDivClicked(){
+        console.log('Div was clicked');
+        
+    }
 } 

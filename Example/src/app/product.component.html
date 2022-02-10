@@ -19,3 +19,10 @@
 <div class="card-border mgn-5" [ngClass]="getClassMap(5)">
     katalogtaki <span [ngStyle]="getStyles(3)">üçüncü ürün </span> {{model.getProductById(5).name}}
 </div>
+
+<!--Event Binding-->
+<div (click)="onDivClicked()" style="width: 200px; height: 100px; background-color: brown;">
+    <button name="btn1" (click)="onSubmit($event)">Button 1</button>
+    <button name="btn2" (click)="onSubmit($event)">Button 2</button>
+
+</div>
