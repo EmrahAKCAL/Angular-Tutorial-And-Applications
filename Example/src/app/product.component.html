@@ -11,11 +11,11 @@
     katalogtaki ilk ürün {{model.getProductById(3).name}}
 </div>
 <div class="card-border mgn-5" [ngClass]="getClassMap(1)">
-    katalogtaki ilk ürün {{model.getProductById(1).name}}
+    katalogtaki <span [style.fontSize]="fontSize">ilk ürün </span> {{model.getProductById(1).name}}
 </div>
 <div class="card-border mgn-5" [ngClass]="getClassMap(4)">
-    katalogtaki ilk ürün {{model.getProductById(4).name}}
+    katalogtaki <span [style.color]="color">ikinci ürün </span> {{model.getProductById(4).name}}
 </div>
 <div class="card-border mgn-5" [ngClass]="getClassMap(5)">
-    katalogtaki ilk ürün {{model.getProductById(5).name}}
+    katalogtaki <span [ngStyle]="getStyles(3)">üçüncü ürün </span> {{model.getProductById(5).name}}
 </div>

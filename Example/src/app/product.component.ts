@@ -22,4 +22,17 @@ export class ProductComponent{
             "text-center text-color": product.name=='Samsung S8'
         }//Var olan class özelliklerini ezmeden class ekleme
     }
-}
+    //color: string= 'red';
+    fontSize: string= '25px';
+    color: string=this.model.getProductById(4).price<=1000? 'green': 'yellow'; //eğer price<=1000 ise color: green, eğer değilse color: 'yellow'
+
+    getStyles(id: number){ //birden fazla style özelliğini uygulamak
+        let product=this.model.getProductById(id);
+        return{
+            fontSize: '25px',
+            color: product.price<=5000? 'blue': 'purple',
+            border: '1px solid grey',
+            backgroundColor: product.price>3000? 'aqua': 'pink'
+        }
+    }
+} 
