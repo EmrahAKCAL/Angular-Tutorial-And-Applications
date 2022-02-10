@@ -59,4 +59,11 @@ export class ProductComponent{
         console.log(email);
         
     }
+    Email='emrahakcl02@gmail.com';
+    oneWay(){
+        console.log(this.Email); 
+    }
+    TwoWay(){
+        alert(this.Email);
+    }
 } 

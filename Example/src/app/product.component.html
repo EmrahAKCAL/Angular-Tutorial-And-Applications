@@ -30,3 +30,9 @@
 <input style="margin: 30px;" (keyup)="onKeyUp($event)"/>
 <input style="margin: 30px;" (keyup.enter)="onKeyUpEnter()"/>
 <input style="margin: 30px;" #email (keyup.enter)="onKeyUpEmail(email.value)"/>
+ <!--Two way binding-->
+<p>One Way Binding</p>
+<input [value]='Email' (keyup.enter)="oneWay()">
+<p>Two Way Binding</p>
+<input [value]='Email' (keyup.enter)="Email=$event.target.value; oneWay()">
+<input [(ngModel)]="Email" (keyup.enter)="TwoWay()">
