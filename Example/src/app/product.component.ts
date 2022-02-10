@@ -66,4 +66,11 @@ export class ProductComponent{
     TwoWay(){
         alert(this.Email);
     }
+
+    //Pipes kullanımı
+    today: number= Date.now();
+    title: string= 'Angular kursu';
+    students: number= 21536;
+    price: number= 368.667;
+    completed: number= 1.275;
 } 

@@ -36,3 +36,36 @@
 <p>Two Way Binding</p>
 <input [value]='Email' (keyup.enter)="Email=$event.target.value; oneWay()">
 <input [(ngModel)]="Email" (keyup.enter)="TwoWay()">
+<!--Pipes-->
+<h1>Pipes Kullanımı</h1>
+<h4>Title Pipe-Upper pipe- lower pipe</h4>
+<p>Title==>  {{title}}</p>
+<p>Lower Pipe==>  {{title | lowercase}}</p> <!--Hepsi küçük harf-->
+<p>Upper Pipe==>  {{title | uppercase}}</p> <!--Hepsi büyük harf-->
+<p>Title Pipe==>  {{title | titlecase}}</p> <!--Her kelimenin baş harfi büyük-->
+<h4>Date Pipe</h4>
+<p>Today==>  {{today}}</p> <!--milisecond -->
+<p>Date Pipe==>  {{today | date}}</p> <!--Tarih -->
+<p>DateShort Pipe==>  {{today | date: 'short'}}</p> 
+<p>DateMedium Pipe==>  {{today | date: 'medium'}}</p> 
+<p>Date Long Pipe==>  {{today | date: 'long'}}</p> 
+<p>Date Full Pipe==>  {{today | date: 'full'}}</p> 
+<p>Date ShortDate Pipe==>  {{today | date: 'shortDate'}}</p> 
+<p>Date MediumDate Pipe==>  {{today | date: 'mediumDate'}}</p> 
+<p>Date FullDate Pipe==>  {{today | date: 'fullDate'}}</p> 
+<p>Date FullDate Pipe==>  {{today | date: 'EEEE, MMMM d, y'}}</p>
+<p>Date MediumTime Pipe==>  {{today | date: 'h: mm:ss'}}</p>
+<p>Saat ve Tarih==> {{today | date: 'h: mm:ss'}}- {{today | date:'d/M/yy'}}</p> <!--saat/dk/sn gün/ay/yıl-->
+<h4>Decimal Pipe</h4>
+<p>Students==> {{students}}</p>
+<p>Decimal number pipe==> {{students | number}}</p> <!--okunabilir format-->
+<p>Decimal number pipe==> {{price | number: '1.2-2'}}</p> <!--Sayıyının tam kısmı ve ondalık kısmı yuvarlatma-->
+<h4>Currency Pipe</h4>
+<p>Price==> {{price}}</p>
+<p>Currency Dollar Pipe==> {{price | currency}}</p> <!--Dollar-->
+<p>Currency EUR Pipe==> {{price | currency: 'EUR'}}</p> <!--EUR-->
+<p>Currency CAD Pipe==> {{price | currency: 'CAD'}}</p> 
+<h4>Percent Pipe</h4>
+<p>Completed==> {{completed}}</p> 
+<p>Percent Pipe==> {{completed | percent}}</p> <!--Sayıyı yuvarlatarak yüzdelik gösterme-->
+<p>Percent Pipe==> {{completed | percent: '3.2-3'}}</p>
