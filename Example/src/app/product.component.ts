@@ -73,4 +73,8 @@ export class ProductComponent{
     students: number= 21536;
     price: number= 368.667;
     completed: number= 1.275;
+
+
+    //Custom pipes kullanımı
+    text= 'Rich system for driving animations based on application state.'
 } 
