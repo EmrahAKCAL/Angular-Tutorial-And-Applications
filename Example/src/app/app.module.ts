@@ -1,14 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ProductComponent } from './product.component';
-
+import { FormsModule } from '@angular/forms';
+import { SummaryPipe } from './summary.pipe';
 
 @NgModule({
   declarations: [ //oluşturmuş olduğumuz component
-    ProductComponent
+    ProductComponent,
+    SummaryPipe
   ],
   imports: [ //angulardan gelen modüller
-    BrowserModule
+    BrowserModule,
+    FormsModule //ngmodel tanımlamak için 
   ],
   providers: [],
   bootstrap: [ProductComponent] //modülün çalıştıracağı ilk component

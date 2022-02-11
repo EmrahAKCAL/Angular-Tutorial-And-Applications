@@ -59,4 +59,22 @@ export class ProductComponent{
         console.log(email);
         
     }
+    Email='emrahakcl02@gmail.com';
+    oneWay(){
+        console.log(this.Email); 
+    }
+    TwoWay(){
+        alert(this.Email);
+    }
+
+    //Pipes kullanımı
+    today: number= Date.now();
+    title: string= 'Angular kursu';
+    students: number= 21536;
+    price: number= 368.667;
+    completed: number= 1.275;
+
+
+    //Custom pipes kullanımı
+    text= 'Rich system for driving animations based on application state.'
 } 
