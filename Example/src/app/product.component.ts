@@ -45,4 +45,18 @@ export class ProductComponent{
         console.log('Div was clicked');
         
     }
+    //keyup: Kullanıcı bir tuşa basmasıyla olur
+    onKeyUp($event){
+        if($event.keyCode=== 13){ //13=enter tuşu(herhangi bir tuşun keycode ile ilişkilendirilebilir.)
+            console.log($event.target.value);
+            
+        }
+    }
+    onKeyUpEnter(){ //sadece enter tuşu
+        alert('Enter')
+    }
+    onKeyUpEmail(email){ //alternatif
+        console.log(email);
+        
+    }
 } 

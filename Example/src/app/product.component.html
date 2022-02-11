@@ -26,3 +26,7 @@
     <button name="btn2" (click)="onSubmit($event)">Button 2</button>
 
 </div>
+<!--keyup event-->
+<input style="margin: 30px;" (keyup)="onKeyUp($event)"/>
+<input style="margin: 30px;" (keyup.enter)="onKeyUpEnter()"/>
+<input style="margin: 30px;" #email (keyup.enter)="onKeyUpEmail(email.value)"/>
