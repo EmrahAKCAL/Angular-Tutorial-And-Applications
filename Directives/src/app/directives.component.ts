@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { ProductRepository } from "./repository.module";
 
 
 @Component({
@@ -8,6 +9,6 @@ import { Component } from "@angular/core";
 })
 
 export class DirectivesComponent{
-    //ts çalışmaların olacağı kısım
-
+    //ts çalışmaların olacağı kısım 
+    model: ProductRepository= new ProductRepository();
 }
