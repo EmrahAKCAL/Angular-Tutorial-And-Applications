@@ -14,3 +14,32 @@
     background-color: #00bbff;
     color: white;
 }
+.list-group{
+    background-color: #dadedf;
+}
+.list-group-item{
+    list-style: none;
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #095e6d;
+}
+.first-item{
+    background-color: #40ff00;
+    color: #fff;
+    padding: 5px;
+}
+.last-item{
+    background-color: #ff0000;
+    color: #fff;
+    padding: 5px;
+}
+.odd-item{
+    background-color: #ff00ea;
+    color: #fff;
+    padding: 5px;
+}
+.even-item{
+    background-color: #ff8400;
+    color: #fff;
+    padding: 5px;
+}

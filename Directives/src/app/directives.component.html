@@ -43,3 +43,14 @@
     <span *ngSwitchCase="'Samsung S7'">Samsung S7</span>
     <span *ngSwitchDefault>Other Product</span>
 </div>
+
+<h1>*ngFor Directive</h1>
+<ul class="list-group">
+    <li *ngFor="let prd of model.getProducts(); index as i; first as isFirst; last as isLast; odd as isOdd; even as isEven;" class="list-group-item">
+        {{i+1}}=>{{prd.name}}---{{prd.price}}
+        <span *ngIf="isFirst" class="first-item">First item</span>
+        <span *ngIf="isLast" class="last-item">Last item</span>
+        <span *ngIf="isOdd" class="odd-item">Odd item</span>
+        <span *ngIf="isEven" class="even-item">Even item</span>
+    </li>
+</ul>
