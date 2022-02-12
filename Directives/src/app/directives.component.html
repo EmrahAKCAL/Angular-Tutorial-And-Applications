@@ -28,3 +28,18 @@
 <div class="card-third" [hidden]="model.getProducts().length!=0"> <!--hidden=true -->
     There are no products in the repository.
 </div>
+
+<h1>ngSwitch Directive</h1>
+<div class="card-first" [ngSwitch]="model.getProductCount()">
+    <span *ngSwitchCase="0">There are no products</span>
+    <span *ngSwitchCase="1">There are 1 products</span>
+    <span *ngSwitchCase="2">There are 2 products</span>
+    <span *ngSwitchDefault>There are many products</span>
+</div>
+<h2>string</h2>
+<div class="card-first" [ngSwitch]="model.getProductsById(3).name">
+    <span *ngSwitchCase="productName">Samsung S5</span>
+    <span *ngSwitchCase="'Samsung S6'">TSamsung S6</span>
+    <span *ngSwitchCase="'Samsung S7'">Samsung S7</span>
+    <span *ngSwitchDefault>Other Product</span>
+</div>

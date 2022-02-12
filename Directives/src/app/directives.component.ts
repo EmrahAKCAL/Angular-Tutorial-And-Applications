@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { ProductRepository } from "./repository.module";
+import { ProductRepository } from "./repostory.model";
 
 
 @Component({
@@ -11,4 +11,5 @@ import { ProductRepository } from "./repository.module";
 export class DirectivesComponent{
     //ts çalışmaların olacağı kısım 
     model: ProductRepository= new ProductRepository();
+    productName: string= this.model.getProductsById(1).name;
 }
