@@ -16,12 +16,19 @@ export class ProductRepository{
         return this.products.find(p=> p.id==id); //dışardan gelen bir id değeri liste içerisindeki her bir elemanın id değerini kontrol edecek ve eşleşme söz konusu ise Product geri döndürecek
     }
 
-    getProducts(): Product[]{
+    getProducts(): Product[]{ //repository üzerinde tanımlanılmış olan products ları alıp html üzerine taşıyoruz.
         return this.products;
     }
 
     getProductCount():number{
         return this.products.length;
+    }
+    addProduct(product: Product){ //gelen verini türü Product olacak.
+        this.products.push(product); //gönderilen product push metodu ile products üzerine ekler.
+    }
+    deleteProduct(dlt: Product){
+        let index= this.products.indexOf(dlt);
+        this.products.splice(index, 1);
     }
 }
 
