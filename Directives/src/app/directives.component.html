@@ -54,3 +54,19 @@
         <span *ngIf="isEven" class="even-item">Even item</span>
     </li>
 </ul>
+
+<h1>Change Detection</h1> <!--liste üzerinde bir değişiklik yapmak-->
+<div>
+    <button (click)="addProduct()">Add Button</button>
+    <ul class="list-group">
+        <li *ngFor="let prd of model.getProducts(); index as i; first as isFirst; last as isLast; odd as isOdd; even as isEven;" class="list-group-item">
+            {{i+1}}=>{{prd.name}}---{{prd.price}}
+            <span *ngIf="isFirst" class="first-item">First item</span>
+            <span *ngIf="isLast" class="last-item">Last item</span>
+            <span *ngIf="isOdd" class="odd-item">Odd item</span>
+            <span *ngIf="isEven" class="even-item">Even item</span>
+            <button (click)="deleteProduct(prd)">Delete</button>
+            <button (click)="updateProduct(prd)">Update</button>
+        </li>
+    </ul>
+</div>
