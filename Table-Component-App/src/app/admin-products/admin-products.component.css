@@ -1,0 +1,57 @@
+.container{
+    width: 40%;
+    margin: auto;
+}
+
+.card-header{
+    background-color: #178ea3;
+    color: #fff;
+    padding: 10px;
+    height: 40px;
+}
+.priceList{
+    width: 100px;
+    text-align: center;
+}
+.card-body{
+    width: 100%;
+    background-color: #fc9700;
+}
+.idList{
+    padding: 5px;
+}
+.imgList{
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+}
+.card-img{
+    width: 100%;
+}
+.nameList{
+    padding: 10px;
+    font-weight: bold;
+    font-size: 22px;
+    text-transform: capitalize;
+    text-shadow: 1px 2px rgba(255, 255, 255, 0.7);
+}
+.btn-list{
+    text-align: center;
+}
+.btnDelete{
+    background-color: #ff0000;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.btnUpdate{
+    background-color: #00ff00;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+}
