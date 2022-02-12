@@ -70,3 +70,18 @@
         </li>
     </ul>
 </div>
+
+<h1>ngTemplateOutlet</h1> <!--Oluşturmuş olduğum yapıyı bir çok kez kullanmak. Bu bir filmler, yeni filmler, vizyondakiler gibi aynı yapıya sahip ama içeriği farklı olarak tanımlayabilriz.-->
+<ng-template [ngTemplateOutlet]="prdList" [ngTemplateOutletContext]="{product: model.getProducts()}"></ng-template>
+
+<ng-template [ngTemplateOutlet]="prdList" [ngTemplateOutletContext]="{context: model.getProducts()}"></ng-template>
+
+<ng-template #prdList let-products="context">
+    <div>
+        <ul class="list-group">
+            <li *ngFor="let product of products" class="list-group-item">
+                {{product.name}}
+            </li>
+        </ul>
+    </div>
+</ng-template>
