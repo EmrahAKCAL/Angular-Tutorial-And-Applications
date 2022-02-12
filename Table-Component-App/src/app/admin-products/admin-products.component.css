@@ -2,7 +2,12 @@
     width: 40%;
     margin: auto;
 }
-
+.card-first{
+    background-color: #07678a;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+}
 .card-header{
     background-color: #178ea3;
     color: #fff;
