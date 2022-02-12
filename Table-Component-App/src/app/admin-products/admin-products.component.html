@@ -1,0 +1,27 @@
+<div class="container">
+    <table class="card">
+        <thead>
+            <tr class="card-header">
+                <th>Id</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th class="priceList">Price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products" class="card-body">
+                <td class="idList">{{product.id}}</td>
+                <td class="imgList">
+                    <img src="/assets/images/{{product.imageUrl}}" class="card-img">
+                </td>
+                <td class="nameList">{{product.name}}</td>
+                <td class="priceList">{{product.price}}</td>
+                <td class="btn-list">
+                    <button class="btnDelete">Delete</button>
+                    <button class="btnUpdate">Update</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductRepository } from './repository.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Table-Component-App';
+  model: ProductRepository= new ProductRepository();
 }
