@@ -1,1 +1,30 @@
-<h1>Yeni</h1>
+<h1>*ngIf Directive</h1>
+<div class="card-first" *ngIf="model.getProducts().length>0">
+    There are {{model.getProducts().length}} products in the repository.
+</div>
+<div class="card-first" *ngIf="model.getProducts().length==0">
+    There are no products in the repository.
+</div>
+
+<!--ngIf= 'true' değer ise görünür yapar, false ise göstermez. ngIf directive tamamen true ve false mantığıyla çalışır.-->
+<h2>ng-template kullanarak</h2>
+<div *ngIf="model.getProducts().length>0; then productList else noProducts" >
+</div>
+<ng-template #productList>
+    <div class="card-second">
+    There are {{model.getProducts().length}} products in the repository. 
+</div>
+</ng-template>
+<ng-template #noProducts>
+    <div class="card-second"> <!--bir class yapısına sahip olması için template div içerisine eklenmeli-->
+    There are no products in the repository.
+</div>
+</ng-template>
+
+<h2>[hidden] kullanarak her iki durumda yapıları gizleme</h2>
+<div class="card-third" [hidden]="model.getProducts().length==0"> <!--hidden=false -->
+    There are {{model.getProducts().length}} products in the repository.
+</div>
+<div class="card-third" [hidden]="model.getProducts().length!=0"> <!--hidden=true -->
+    There are no products in the repository.
+</div>

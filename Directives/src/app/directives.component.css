@@ -1,0 +1,16 @@
+.card-first{
+    padding: 10px;
+    background-color: blue;
+    color: white;
+}
+.card-second{
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #40ff00;
+    color: white;
+}
+.card-third{
+    padding: 10px;
+    background-color: #00bbff;
+    color: white;
+}
