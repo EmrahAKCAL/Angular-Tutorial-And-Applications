@@ -17,9 +17,9 @@
                 <tbody>
                     <tr *ngFor="let product of products" 
                     class="card-body" 
-                    (mouseover)="selecetedProduct=product.name" 
-                    (mouseleave)="selecetedProduct='(None)'"
-                    [class.bg-info]="getSelected(product)" >
+                    (mouseover)="pName.value=product.name" 
+                    (mouseleave)="pName.value='(None)'"
+                    [class.bg-info]="pName.value==product.name" >
                         <td class="idList">{{product.id}}</td>
                         <td class="imgList">
                             <img src="/assets/images/{{product.imageUrl}}" class="card-img">
@@ -36,7 +36,7 @@
         </div>
         <div class="form-group">
             <label> Product Name</label>
-            <input (input)="selecetedProduct=$event.target.value" type="text" class="form-control">       
+            <input #pName (keyup.enter)="selecetedProduct=pName.value" type="text" class="form-control">       
         </div>
     </div>
 </div>
