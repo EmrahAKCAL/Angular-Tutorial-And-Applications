@@ -28,7 +28,7 @@
                         </td>
                         <td class="priceList">{{product.price}}</td>
                         <td class="btn-list">
-                            <button class="btnDelete" >Delete</button>
+                            <button class="btnDelete" (click)="deleteProduct(product)" >Delete</button>
                             <button (click)="editProduct(product)" class="editBtn">Edit</button>
                         </td>
                     </tr>

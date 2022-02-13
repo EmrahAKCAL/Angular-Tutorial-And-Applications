@@ -22,12 +22,22 @@ export class AdminProductsComponent implements OnInit {
      this.selecetedProduct=product;
    }
    SaveChanges(){
-     const p= this.model.getProductsById(this.selecetedProduct.id);
-     p.name=this.selecetedProduct.name;
-     p.price=this.selecetedProduct.price;
-     p.imageUrl=this.selecetedProduct.imageUrl;
-     p.description=this.selecetedProduct.description;
-     this.selecetedProduct=null; //işlem bittikten sonra seçimi kaldırsın
+     const editChanges=confirm('Are you sure you want to save the changes?');
+     if(editChanges===true){
+      const p= this.model.getProductsById(this.selecetedProduct.id);
+      p.name=this.selecetedProduct.name;
+      p.price=this.selecetedProduct.price;
+      p.imageUrl=this.selecetedProduct.imageUrl;
+      p.description=this.selecetedProduct.description;
+      this.selecetedProduct=null; //işlem bittikten sonra seçimi kaldırsın
+     }
+   }
+   deleteProduct(product: Product):void{
+      const ratification=confirm('Are you sure you want to delete?');
+      if(ratification===true){
+      const index= this.model.getProducts().indexOf(product);
+      this.model.getProducts().splice(index, 1);
+     }
    }
   ngOnInit() {
   }
