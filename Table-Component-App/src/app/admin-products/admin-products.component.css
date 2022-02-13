@@ -5,6 +5,7 @@
 }
 .card-row{
     display: flex;
+    justify-content: space-between;
 }
 .card-first{
     margin-right: 10px;
@@ -41,11 +42,23 @@
     width: 100%;
 }
 .nameList{
-    padding: 10px;
+    padding: 20px;
+    display:flow-root;
+}
+.prdName{
     font-weight: bold;
     font-size: 22px;
     text-transform: capitalize;
-    text-shadow: 1px 2px rgba(255, 255, 255, 0.7);
+    text-shadow: 1px 2px hsla(0, 0%, 100%, 0.702);
+    margin-bottom: 10px;
+}
+.prdDescription{
+    text-transform: capitalize;
+    border: 1px solid grey;
+    background-color: #fff;
+    height: 80px;
+    border-radius: 10px;
+    padding: 5px;
 }
 .btn-list{
     text-align: center;
@@ -59,7 +72,7 @@
     color: #fff;
     margin-bottom: 20px;
 }
-.btnUpdate{
+.editBtn{
     background-color: #00ff00;
     border: none;
     padding: 10px;
@@ -71,11 +84,12 @@
 .bg-info{
     background-color: #07678a8c;
 }
+.card-second{
+    width: 50%;
+}
 .form-group{
-    height: 100px;
     background-color: #00ffc353;
     padding: 20px;
-    width: 50%;
     border-radius: 5px;
 }
 .form-control{
