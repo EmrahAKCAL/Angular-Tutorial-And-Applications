@@ -1,8 +1,15 @@
 .container{
-    width: 40%;
-    margin: auto;
+    background-color: #c6c4c441;
+    margin: 0;
+    padding: 0;
+}
+.card-row{
+    display: flex;
 }
 .card-first{
+    margin-right: 10px;
+}
+.card-product{
     background-color: #07678a;
     color: #fff;
     text-align: center;
@@ -20,7 +27,7 @@
 }
 .card-body{
     width: 100%;
-    background-color: #fc9700;
+    background-color: #fc970066;
 }
 .idList{
     padding: 5px;
@@ -59,4 +66,21 @@
     border-radius: 10px;
     font-size: 16px;
     color: #fff;
+}
+
+.bg-info{
+    background-color: #07678a8c;
+}
+.form-group{
+    height: 100px;
+    background-color: #00ffc353;
+    padding: 20px;
+    width: 50%;
+    border-radius: 5px;
+}
+.form-control{
+    margin-top: 5px;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 22px;
 }
