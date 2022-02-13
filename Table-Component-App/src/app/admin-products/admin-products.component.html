@@ -1,7 +1,7 @@
 <div class="container">
     <div class="card-row">
         <div class="card-first">
-            <div class="card-product">
+            <div class="card-product" *ngIf="selecetedProduct">
                 Selected Product: {{selecetedProduct.name || '(None)'}}
             </div>
             <table class="card">
@@ -28,31 +28,31 @@
                         </td>
                         <td class="priceList">{{product.price}}</td>
                         <td class="btn-list">
-                            <button class="btnDelete">Delete</button>
+                            <button class="btnDelete" >Delete</button>
                             <button (click)="editProduct(product)" class="editBtn">Edit</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <div class="card-second">
+        <div class="card-second" *ngIf="selecetedProduct">
             <div class="form-group">
                 <label> Product Name</label>
-                <input #pName [value]="selecetedProduct.name" (keyup.enter)="selecetedProduct.name=pName.value" type="text" class="form-control">       
+                <input [(ngModel)]="selecetedProduct.name" type="text" class="form-control">       
             </div>
             <div class="form-group">
                 <label> Product Price</label>
-                <input #pPrice [value]="selecetedProduct.price" (keyup.enter)="selecetedProduct.price=pPrice.value" type="text" class="form-control">       
+                <input [(ngModel)]="selecetedProduct.price" type="text" class="form-control">       
             </div>
             <div class="form-group">
                 <label> Product Image</label>
-                <input #pImage [value]="selecetedProduct.imageUrl" (keyup.enter)="selecetedProduct.imageUrl=pImage.value" type="text" class="form-control">       
+                <input [(ngModel)]="selecetedProduct.imageUrl" type="text" class="form-control">       
             </div>
             <div class="form-group">
                 <label> Product Description</label>
-                <textarea #pDescription [value]="selecetedProduct.description" (keyup.enter)="selecetedProduct.description=pDescription.value" type="text" class="form-control textDecoration"> </textarea>     
+                <textarea [(ngModel)]="selecetedProduct.description" type="text" class="form-control textDecoration"> </textarea>     
             </div>
-            <button class="btnSave" (cliclk)>Save Changes</button>
+            <button class="btnSave" (click)="SaveChanges()">Save Changes</button>
         </div>
     </div>
 </div>

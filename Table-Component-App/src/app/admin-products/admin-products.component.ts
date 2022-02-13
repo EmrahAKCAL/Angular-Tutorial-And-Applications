@@ -21,6 +21,14 @@ export class AdminProductsComponent implements OnInit {
    editProduct(product: Product){ 
      this.selecetedProduct=product;
    }
+   SaveChanges(){
+     const p= this.model.getProductsById(this.selecetedProduct.id);
+     p.name=this.selecetedProduct.name;
+     p.price=this.selecetedProduct.price;
+     p.imageUrl=this.selecetedProduct.imageUrl;
+     p.description=this.selecetedProduct.description;
+     this.selecetedProduct=null; //işlem bittikten sonra seçimi kaldırsın
+   }
   ngOnInit() {
   }
 

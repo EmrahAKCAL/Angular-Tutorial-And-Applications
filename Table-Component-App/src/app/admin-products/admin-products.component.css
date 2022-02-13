@@ -98,3 +98,11 @@
     border-radius: 4px;
     font-size: 22px;
 }
+.btnSave{
+    background-color: #2b00ff;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 10px; 
+}
