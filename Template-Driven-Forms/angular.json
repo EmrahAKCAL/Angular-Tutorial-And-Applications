@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Template-Driven-Forms": {
+    "Template-driven-forms": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Template-Driven-Forms",
+            "outputPath": "dist/Template-driven-forms",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Template-Driven-Forms:build"
+            "browserTarget": "Template-driven-forms:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Template-Driven-Forms:build:production"
+              "browserTarget": "Template-driven-forms:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Template-Driven-Forms:build"
+            "browserTarget": "Template-driven-forms:build"
           }
         },
         "test": {
@@ -111,15 +111,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Template-Driven-Forms:serve"
+            "devServerTarget": "Template-driven-forms:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Template-Driven-Forms:serve:production"
+              "devServerTarget": "Template-driven-forms:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "Template-Driven-Forms"
+  "defaultProject": "Template-driven-forms"
 }

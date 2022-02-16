@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Template-Driven-Forms'`, () => {
+  it(`should have as title 'Template-driven-forms'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('Template-Driven-Forms');
+    expect(app.title).toEqual('Template-driven-forms');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('Template-Driven-Forms app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('Template-driven-forms app is running!');
   });
 });

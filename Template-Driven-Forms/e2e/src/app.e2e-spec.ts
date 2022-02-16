@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Template-Driven-Forms app is running!');
+    expect(page.getTitleText()).toEqual('Template-driven-forms app is running!');
   });
 
   afterEach(async () => {
