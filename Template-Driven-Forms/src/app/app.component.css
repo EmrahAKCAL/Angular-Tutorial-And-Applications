@@ -31,3 +31,7 @@
     margin: 10px;
     color: #22ff00;
 }
+.alert-danger{
+    background-color: #ff7d7d;
+    padding: 5px;
+}
