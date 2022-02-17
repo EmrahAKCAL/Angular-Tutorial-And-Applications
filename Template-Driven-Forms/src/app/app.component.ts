@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Product } from './product.model';
 import { ProductRepository } from './responsive.model';
 
@@ -20,6 +21,17 @@ export class AppComponent {
   addProduct(prd: Product){ //kayıt ekleme metotu
     console.log('New Product: '+this.jsonProduct);
   }
+  formSubmitted: boolean=false;
+  submitForm(form: NgForm){
+    this.formSubmitted=true;
+    if(form.valid){
+      this.addProduct(this.newProduct);
+      this.newProduct= new Product();
+      form.reset();
+      this.formSubmitted=false;
+    }
+  }
+
   getValidationErrors(state: any){
     let ctrlName: string= state.name;
     let messages: string[]= []; //messages değişkeni string tipinde bir dizidir ve ilk başta içi boştur.

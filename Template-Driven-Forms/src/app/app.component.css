@@ -34,3 +34,7 @@
 .alert-danger{
     background-color: #ff7d7d;
 }
+.form-message{
+    background-color: #ff0000;
+    color: #fff;
+}
