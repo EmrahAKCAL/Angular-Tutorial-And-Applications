@@ -3,6 +3,9 @@
     <div class="card-first">
       <form #form="ngForm" (ngSubmit)="submitForm(form)">
         <div class="form-message" *ngIf="formSubmitted && form.invalid "> Bir hata oluştu. Bilgilerinizi kontrol ediniz.
+          <ul>
+            <li *ngFor="let error of getFormValidationErrors(form)"> {{error}} </li>
+          </ul>
         </div>
         <div class="card-form">
           {{jsonProduct}}
@@ -12,7 +15,9 @@
           <input required minlength="3" maxlength="10" pattern="^[A-Za-z ]+$" [(ngModel)]="newProduct.name" name="name" #name="ngModel" type="text" class="form-control">
           <!--Buradaki ngModel form kontrolünü sağlamaktadır. (change)='log(name)' buradaki log metoda ngModel bilgisini gönderecektir.-->
           <div class="alert-danger" *ngIf="(formSubmitted || name.dirty) && name.invalid">
-            <p *ngFor="let error of getValidationErrors(name)"> {{error}} </p>
+            <ul>
+              <li *ngFor="let error of getValidationErrors(name)"> {{error}}</li>
+            </ul>
           </div>
         </div>
         <div class="form-group">
