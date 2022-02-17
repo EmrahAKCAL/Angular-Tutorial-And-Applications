@@ -29,12 +29,17 @@
     border: none;
     border-radius: 7px;
     margin: 10px;
-    color: #22ff00;
+    color: #ffffff;
+    cursor: pointer;
 }
 .alert-danger{
     background-color: #ff7d7d;
 }
 .form-message{
     background-color: #ff0000;
+    color: #fff;
+}
+.btn-secondary{
+    background-color: #808080;
     color: #fff;
 }
