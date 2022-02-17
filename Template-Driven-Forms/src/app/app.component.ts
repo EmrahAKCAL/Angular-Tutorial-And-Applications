@@ -20,8 +20,4 @@ export class AppComponent {
   addProduct(prd: Product){ //kayıt ekleme metotu
     console.log('New Product: '+this.jsonProduct);
   }
-  log(m){
-    console.log(m);
-    
-  }
 }

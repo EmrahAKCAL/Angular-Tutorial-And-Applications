@@ -1,0 +1,6 @@
+.ng-touched.ng-invalid{
+    border: 2px solid #fe0400;
+} /*kullancı inputu ziyaret etmiş ancak girilen değerler kuralara yetmemşl */
+.ng-dirty.ng-valid{
+    border: 2px solid #42A948;
+} /*kullanıcı değer girmiş ve girilen değerler kurala uyuyorsa */
