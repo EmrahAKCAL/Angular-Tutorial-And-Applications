@@ -1,20 +1,19 @@
-<form>
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
   <div class="form-group">
     <label>Name</label>
-    <input class="form-control" [formControl]="name">
-    value: {{name.value}}
+    <input class="form-control" formControlName="name">
   </div>
   <div class="form-group">
     <label>Direction</label>
-    <textarea class="form-control" [formControl]="decoration"></textarea>
+    <textarea class="form-control" formControlName="decoration"></textarea>
   </div>
   <div class="form-group">
     <label>Price</label>
-    <input class="form-control" [formControl]="price">
+    <input class="form-control" formControlName="price">
   </div>
   <div class="form-group">
     <label>Image Url</label>
-    <input class="form-control" [formControl]="imageUrl">
+    <input class="form-control" formControlName="imageUrl">
   </div>
-  <button type="submit" (click)="updateName()" class="btn-submit">Submit</button>
+  <button type="submit" (click)=" updateProduct()" class="btn-submit">Submit</button>
 </form>
