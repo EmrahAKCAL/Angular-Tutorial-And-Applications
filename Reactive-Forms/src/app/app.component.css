@@ -25,7 +25,8 @@ form{
     margin: 10px;
     font-weight: bold;
 }
-.alert-danger{
+
+ul{
+    list-style: none;
     color: #f92e2e;
 }
-

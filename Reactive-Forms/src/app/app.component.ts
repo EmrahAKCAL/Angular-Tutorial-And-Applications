@@ -11,7 +11,8 @@ export class AppComponent {
   productForm= new FormGroup({
     name: new FormControl('', [
       Validators.required, //zorunlu alan
-      Validators.minLength(5) //minimum karakter sayısı
+      Validators.minLength(3), //minimum karakter sayısı
+      Validators.maxLength(20)
     ]), 
     decoration: new FormControl('',[
       Validators.email,
@@ -23,6 +24,9 @@ export class AppComponent {
 
   onSubmit(){
     console.log(this.productForm.value);
+  }
+  get name(){
+    return this.productForm.get('name');
   }
 
   updateProduct(){
