@@ -1,0 +1,28 @@
+form{
+    margin: auto;
+    padding: 10px;
+    width: 600px;
+    background-color: #9d5d5d;
+    border-radius: 8px;
+}
+.form-group{
+    margin: 10px;
+    color: #011f03;
+}
+.form-control{
+    display: block;
+    width: 100%;
+    padding: 3px;
+    border-radius: 5px;
+}
+.btn-submit{
+    background: #2cb035;
+    border: none;
+    padding: 10px;
+    width: 100px;
+    border-radius: 8px;
+    color: #fff;
+    margin: 10px;
+    font-weight: bold;
+}
+
