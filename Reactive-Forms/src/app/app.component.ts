@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +9,16 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class AppComponent {
 
   productForm= new FormGroup({
-    name: new FormControl('Samsun S5'), 
-    decoration: new FormControl('iyi bir telefon'),
-    price: new FormControl('2000'),
-    imageUrl: new FormControl('1.jpg')
+    name: new FormControl('', [
+      Validators.required, //zorunlu alan
+      Validators.minLength(5) //minimum karakter sayısı
+    ]), 
+    decoration: new FormControl('',[
+      Validators.email,
+      Validators.required
+    ]),
+    price: new FormControl(''),
+    imageUrl: new FormControl('')
   })
 
   onSubmit(){

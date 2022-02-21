@@ -2,7 +2,7 @@ form{
     margin: auto;
     padding: 10px;
     width: 600px;
-    background-color: #9d5d5d;
+    background-color: #d7d7d7;
     border-radius: 8px;
 }
 .form-group{
@@ -24,5 +24,8 @@ form{
     color: #fff;
     margin: 10px;
     font-weight: bold;
+}
+.alert-danger{
+    color: #f92e2e;
 }
 
