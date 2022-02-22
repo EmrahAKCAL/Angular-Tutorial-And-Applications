@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { url } from 'inspector';
 
 @Component({
   selector: 'posts',
@@ -8,10 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsComponent{
 
-  posts;
+  posts:[any];
+  private url = 'https://jsonplaceholder.typicode.com/posts';
   constructor(private http: HttpClient) { 
-    http.get('https://jsonplaceholder.typicode.com/posts').subscribe(response=>{
-      this.posts=response;
+    http.get(this.url).subscribe(response=>{
+      this.posts=<[any]>response;
+    })
+  }
+
+  createPost(input: HTMLInputElement){
+    const post={title: input.value}
+    input.value='';
+    this.http.post(this.url, JSON.stringify(post)).subscribe(response=>{
+      post['id']=response['id'];
+      this.posts.splice(0, 0, post); //0. indexte başla hiç eleman silme ve post ekle(post u listenin en üstüne ekler)
+      console.log(response);
+      
     })
   }
 }
