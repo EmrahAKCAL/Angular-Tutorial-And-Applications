@@ -16,3 +16,11 @@
     list-style: none;
     background-color: #fff;
 }
+.updateBtn{
+    float: right;
+    background: #00b3ff;
+    color: #fff;
+    border: none;
+    padding: 3px;
+    border-radius: 4px;
+}

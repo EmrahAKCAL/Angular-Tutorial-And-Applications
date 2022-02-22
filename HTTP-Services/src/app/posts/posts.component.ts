@@ -27,6 +27,21 @@ export class PostsComponent{
       
     })
   }
+
+  updatePost(post){
+    post.title='updated';
+
+    this.http.put(this.url+'/'+post.id, JSON.stringify(post)).subscribe(response=>{
+      console.log(response);
+    })
+
+    // this.http.patch(this.url+'/'+post.id, JSON.stringify({
+    //   title: 'updatedddddd',
+    // })).subscribe(response=>{
+    //   console.log(response);
+      
+    // })
+  }
 }
 
 //subscribe: bir response geldiği anda çalıştıracak olan bir metottur.
