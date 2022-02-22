@@ -1,0 +1,26 @@
+.container{
+    width: 60%;
+    margin: auto;
+}
+.form-control{
+    padding: 5px;
+    width: 100%;  
+}
+.list-group{
+    background-color: #c1bfbf;
+    padding: 5px;
+}
+.list-group-item{
+    padding: 5px;
+    margin-top: 10px;
+    list-style: none;
+    background-color: #fff;
+}
+.updateBtn{
+    float: right;
+    background: #00b3ff;
+    color: #fff;
+    border: none;
+    padding: 3px;
+    border-radius: 4px;
+}
