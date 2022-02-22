@@ -24,3 +24,12 @@
     padding: 3px;
     border-radius: 4px;
 }
+.deleteBtn{
+    float: right;
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 3px;
+    border-radius: 4px;
+    margin-left: 10px;
+}
