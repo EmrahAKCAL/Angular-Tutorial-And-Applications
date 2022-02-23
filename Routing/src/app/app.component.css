@@ -1,0 +1,46 @@
+.container{
+    background: #efefef;  
+    margin: 0;  
+    padding: 0;
+}
+.card-first{
+    background: #710404;
+    height: 60px;
+}
+.nav-group{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+.nav-item{
+    list-style: none;
+    padding: 5px;
+    background: #a88417;
+    margin-left: 5px;
+    width: 100px;
+    text-align: center;
+    border-radius: 4px;
+}
+.nav-link{
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+}
+.nav-left{
+    margin-left: 20px;
+    display: flex; 
+}
+.card-second{
+    display: flex;
+    background: #ffa500;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
