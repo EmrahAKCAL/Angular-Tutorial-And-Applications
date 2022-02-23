@@ -1,4 +1,5 @@
 <div class="container">
+    <div class="alert-danger" *ngIf="error">{{error}}</div>
     <input type="text" class="form-control" (keyup.enter)="createPost(input)" #input>
 <ul class="list-group">
     <li *ngFor="let post of posts" class="list-group-item">
