@@ -33,3 +33,8 @@
     border-radius: 4px;
     margin-left: 10px;
 }
+.alert-danger{
+    background: #ff8d8d;
+    margin-bottom: 10px;
+    padding: 5px;
+}
