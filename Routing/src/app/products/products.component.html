@@ -1,5 +1,7 @@
 <ul class="list-group">
-    <li *ngFor="let item of products" class="list-group-item">{{item.name}}</li>
+    <li *ngFor="let item of products" class="list-group-item">{{item.name}}
+        <a [routerLink]="['/products', item.id]">Detay</a>
+    </li>
 </ul>
 <p><a routerLink="products">Products</a></p> <!--bulunduğu dizinin içerisinden alt dizinine iner. Yani .../products/products -->
 <button (click)="loadProducts()" class="btn-primary">Sayfayı Yenile</button>
