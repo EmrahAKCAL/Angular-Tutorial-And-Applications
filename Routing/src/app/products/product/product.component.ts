@@ -12,8 +12,12 @@ export class ProductComponent implements OnInit {
   constructor(private route: ActivatedRoute ) { }
 
   ngOnInit() { //product çalıştırıldığında bir kere çalıştırılacak metot
-    let id= +this.route.snapshot.paramMap.get('id'); //istediğimiz route parametresini alabiliriz.(+ gelen string değeri number e çavirmek içindir.)
-    this.selectedProduct=products.find(i=> i.id===id); //products üzerinden arama yapılır.
+    // let id= +this.route.snapshot.paramMap.get('id'); //istediğimiz route parametresini alabiliriz.(+ gelen string değeri number e çavirmek içindir.)
+    // this.selectedProduct=products.find(i=> i.id===id); //products üzerinden arama yapılır.
+    this.route.paramMap.subscribe(params=>{ //asenkron olarak çalışması için
+      let id=+params.get('id');
+      this.selectedProduct=products.find(i=>i.id===id);
+    })
   }
 
 }
