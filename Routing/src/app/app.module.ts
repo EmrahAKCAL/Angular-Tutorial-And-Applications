@@ -8,11 +8,13 @@ import { UsersComponent } from './users/users.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { ProductComponent } from './products/product/product.component';
 
 const appRoutes: Routes=[
   { path: '',component: HomeComponent }, //kullanıcı herhangi bir url girmezse(localhost:4200)
   { path: 'home',component: HomeComponent },
   { path: 'products',component: ProductsComponent },
+  { path: 'products/:id',component: ProductComponent },
   { path: 'users',component: UsersComponent },
   { path: '**',component: NotfoundComponent } //kullanıcı bunlar haricinde bir url girdiğinde
 ];
@@ -24,7 +26,8 @@ const appRoutes: Routes=[
     ProductsComponent,
     UsersComponent,
     CategoriesComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
