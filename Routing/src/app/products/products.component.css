@@ -1,0 +1,32 @@
+.card-first{
+    background-color: #15ff00;
+    
+}
+td{
+    background-color: #efefef;
+    padding: 10px;
+    margin: 5px;
+}
+td a{
+    padding: 5px;
+    margin: 5px;
+    background: #6d06a0;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.card-second{
+    background-color: #7e00fc;
+}
+.card-second a, .btn-primary{
+    background: #fc0065;
+    padding: 5px;
+    color: #fff;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+}
+.card-third{
+    background-color: #ff00b7;
+}
