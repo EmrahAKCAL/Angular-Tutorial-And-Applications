@@ -19,6 +19,8 @@ const appRoutes: Routes=[
   { path: '**',component: NotfoundComponent } //kullanıcı bunlar haricinde bir url girdiğinde
 ];
 
+//localhost:4200/products?page=1&order=price 
+
 @NgModule({
   declarations: [
     AppComponent,
