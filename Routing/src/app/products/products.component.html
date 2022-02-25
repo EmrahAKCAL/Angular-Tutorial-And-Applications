@@ -4,4 +4,12 @@
     </li>
 </ul>
 <p><a routerLink="products">Products</a></p> <!--bulunduğu dizinin içerisinden alt dizinine iner. Yani .../products/products -->
+<a class="btn-primary"
+routerLink="/products"
+[queryParams]="{page: 1, order: 'bestselling'}"
+>En Çok Satanlar</a>
+<a class="btn-primary"
+routerLink="/products"
+[queryParams]="{page: 1, order: 'newest'}"
+>En Yeni Ürünler</a>
 <button (click)="loadProducts()" class="btn-primary">Sayfayı Yenile</button>
