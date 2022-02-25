@@ -1,15 +1,21 @@
-<ul class="list-group">
-    <li *ngFor="let item of products" class="list-group-item">{{item.name}}
-        <a [routerLink]="['/products', item.id]">Detay</a>
-    </li>
-</ul>
-<p><a routerLink="products">Products</a></p> <!--bulunduğu dizinin içerisinden alt dizinine iner. Yani .../products/products -->
-<a class="btn-primary"
-routerLink="/products"
-[queryParams]="{page: 1, order: 'bestselling'}"
->En Çok Satanlar</a>
-<a class="btn-primary"
-routerLink="/products"
-[queryParams]="{page: 1, order: 'newest'}"
->En Yeni Ürünler</a>
-<button (click)="loadProducts()" class="btn-primary">Sayfayı Yenile</button>
+<div class="card-first">
+    <table>
+        <tr *ngFor="let item of products" class="list-group-item">
+            <td> {{item.id}}</td>
+            <td> {{item.name}}</td>
+            <td>
+                <a [routerLink]="['/products', item.id]">Detay</a>
+                <a [routerLink]="['/products', item.id, 'edit']">Edit</a>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="card-second">
+    <a routerLink="products">Products</a> <!--bulunduğu dizinin içerisinden alt dizinine iner. Yani .../products/products -->
+    <a class="btn-primary" routerLink="/products" [queryParams]="{page: 1, order: 'bestselling'}">En Çok Satanlar</a>
+    <a class="btn-primary" routerLink="/products" [queryParams]="{page: 1, order: 'newest'}">En Yeni Ürünler</a>
+    <button (click)="loadProducts()" class="btn-primary">Sayfayı Yenile</button>
+</div>
+<div class="card-third">
+    <router-outlet></router-outlet>
+</div>

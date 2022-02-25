@@ -32,11 +32,17 @@
 }
 .card-second{
     display: flex;
-    background: #ffa500;
-    justify-content: space-between;
-    padding: 5px;
 }
-
+.card-categories{
+    background: #0091ff;
+    width: 30%;
+    height: 200px;
+}
+.card-pages{
+    background: #ffb700e6;
+    width: 70%;
+    height: 500px;
+}
 
 
 

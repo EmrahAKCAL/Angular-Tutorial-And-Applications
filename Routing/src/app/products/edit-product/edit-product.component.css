@@ -1,0 +1,9 @@
+.form-group{
+    padding: 5px;
+    margin-left: 10px;
+    background-color: #1d7e7e;
+}
+.form-control{
+    display: flex;
+    padding: 4px;
+}
