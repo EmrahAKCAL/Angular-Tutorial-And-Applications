@@ -12,6 +12,7 @@ import { UserComponent } from './users/user/user.component';
 import { EditProductComponent } from './products/edit-product/edit-product.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AdminModule } from './admin/admin.module';
+import { AuthGuard } from './auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { AdminModule } from './admin/admin.module';
     AdminModule, 
     AppRoutingModule //her zaman altta olmalı
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
