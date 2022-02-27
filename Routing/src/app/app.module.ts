@@ -13,6 +13,7 @@ import { EditProductComponent } from './products/edit-product/edit-product.compo
 import { AppRoutingModule } from './app-routing.module';
 import { AdminModule } from './admin/admin.module';
 import { AuthGuard } from './auth-guard.service';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AuthGuard } from './auth-guard.service';
     NotfoundComponent,
     ProductComponent,
     UserComponent,
-    EditProductComponent
+    EditProductComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
