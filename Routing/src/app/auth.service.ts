@@ -1,6 +1,6 @@
 export class AuthService {
     loggedIn= false; //kullanıcı varsayılan olarak alacak değer
-
+    redirectUrl: string; //kullanıcı login olduğunda gidebilecek
     isAuthenticated(){
         const promise= new Promise((resolve, reject)=>{ //eğer başarılı bir sonuç dönüyorsa resolve içerisine, eğer bir hata sonucun döndürüyorsa reject içerisine geri gönderir.
             setTimeout(()=>{

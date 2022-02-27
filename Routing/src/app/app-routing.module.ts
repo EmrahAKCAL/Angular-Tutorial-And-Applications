@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
+import { LoginComponent } from "./login/login.component";
 import { NotfoundComponent } from "./notfound/notfound.component";
 import { EditProductComponent } from "./products/edit-product/edit-product.component";
 import { ProductComponent } from "./products/product/product.component";
@@ -10,7 +11,7 @@ import { UsersComponent } from "./users/users.component";
 
 const appRoutes: Routes=[
     { path: '',component: HomeComponent }, //kullanıcı herhangi bir url girmezse(localhost:4200)
-    { path: 'home',component: HomeComponent },
+    { path: 'login',component: LoginComponent },
     { path: 'products',component: ProductsComponent, children:[
       { path: ':id',component: ProductComponent },
       { path: ':id/edit',component: EditProductComponent },
